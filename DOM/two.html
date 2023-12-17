@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thurday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);       // HTMLCollection
+    // console.log(parent.children[1]);    // 1st element of the collection
+    // console.log(parent.children[1].innerHTML);   
+    
+    // for(let i=0; i<parent.children.length; i++){
+    //    console.log(parent.children[i].innerHTML);
+    // }
+
+    // parent.children[1].style.color = "orange"       // font color of element at idex 1 will change
+
+    // console.log(parent.firstElementChild);      // returns entire first element
+    // console.log(parent.firstElementChild.innerHTML);    // returns innerHTML of 1st element
+    // console.log(parent.lastElementChild);       // returns last element
+
+    // const dayOne = document.querySelector('.day');      // will find the first element with the given class
+    // console.log(dayOne);        
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);         // tuesday
+
+    console.log("Nodes: ", parent.childNodes);      // here, it results 9
+
+</script>
+</html>
+
+
+
+<!-- 
+    parent.children         // will return HTMLCollection
+    We can identify parent or children of any element in the page.
+    We can apply basic for loop on this HTMLCollection
+
+    We can also find parent element of a particular element
+
+    "parent.childNodes" -> 9 becuase the tree structure counts every element:
+    1. we have a line break after div with class parent
+    2. div (class day)
+    3. line break (text)
+    4. div (class day)
+    5. line break (text)
+    and so on..
+
+ -->
